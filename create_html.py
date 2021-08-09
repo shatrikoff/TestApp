@@ -1,3 +1,21 @@
+import platform,socket,re,uuid,json,logging
+
+def getSystemInfo():
+    try:
+        info={}
+        info['platform']=platform.system()
+        info['platform-release']=platform.release()
+        info['platform-version']=platform.version()
+        info['architecture']=platform.machine()
+        info['hostname']=socket.gethostname()
+        info['ip-address']=socket.gethostbyname(socket.gethostname())
+        info['mac-address']=':'.join(re.findall('..', '%012x' % uuid.getnode()))
+        info['processor']=platform.processor()
+        return json.dumps(info)
+    except Exception as e:
+        logging.exception(e)
+
+
 f = open('index.html','w')
 
 message = """<HTML>
@@ -21,12 +39,16 @@ setTimeout('Elastic()',100)
 <BODY  bgcolor=black  onLoad=Elastic()>
 <CENTER>
 <font color="white"><h2>Hello from <font color="yellow">Artyom Shatrov!</font><br>
-Welcome to Home Page! This is my first site on flask!!!
+Welcome to Home Page!
 <font color="blue"><H1 ID="elastic" ALIGN="Center">This's my site for exam of DevOps Course!</H1>
 <br>
 
 </body>
-</HTML>"""
+</HTML>                 
+
+
+"""
 
 f.write(message)
+f.write(getSystemInfo())
 f.close()
