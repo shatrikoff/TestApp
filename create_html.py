@@ -39,7 +39,7 @@ setTimeout('Elastic()',100)
 <BODY  bgcolor=black  onLoad=Elastic()>
 <CENTER>
 <font color="white"><h2>Hello from <font color="yellow">Artyom Shatrov!</font><br>
-Welcome to Home Page! 888888888888888888
+Welcome to Home Page!
 <font color="blue"><H1 ID="elastic" ALIGN="Center">This's my site for exam of DevOps Course!</H1>
 <br>
 
