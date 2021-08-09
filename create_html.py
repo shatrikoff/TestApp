@@ -1,5 +1,4 @@
 import platform,socket,re,uuid,json,logging
-import os
 
 def getSystemInfo():
     try:
@@ -52,7 +51,5 @@ Welcome to Home Page!
 
 f.write(message)
 f.write(getSystemInfo())
-#f.write(os.name)
 f.close()
-'''with open('index.html', 'w') as file:
-    file.write(os.name)'''
+
