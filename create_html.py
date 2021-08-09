@@ -1,4 +1,5 @@
 import platform,socket,re,uuid,json,logging
+import os
 
 def getSystemInfo():
     try:
@@ -39,7 +40,7 @@ setTimeout('Elastic()',100)
 <BODY  bgcolor=black  onLoad=Elastic()>
 <CENTER>
 <font color="white"><h2>Hello from <font color="yellow">Artyom Shatrov!</font><br>
-Welcome to Home Page!11111111111111111
+Welcome to Home Page!
 <font color="blue"><H1 ID="elastic" ALIGN="Center">This's my site for exam of DevOps Course!</H1>
 <br>
 
@@ -51,4 +52,7 @@ Welcome to Home Page!11111111111111111
 
 f.write(message)
 f.write(getSystemInfo())
+#f.write(os.name)
 f.close()
+'''with open('index.html', 'w') as file:
+    file.write(os.name)'''
