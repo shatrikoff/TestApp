@@ -21,7 +21,7 @@ setTimeout('Elastic()',100)
 <BODY  bgcolor=black  onLoad=Elastic()>
 <CENTER>
 <font color="white"><h2>Hello from <font color="yellow">Artyom Shatrov!</font><br>
-Welcome to Home Page!
+Welcome to Home Page! This is my first site on flask!!!
 <font color="blue"><H1 ID="elastic" ALIGN="Center">This's my site for exam of DevOps Course!</H1>
 <br>
 
